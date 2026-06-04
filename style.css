@@ -5,16 +5,12 @@ body{
     color:#222;
 }
 
-/* HEADER */
-
 header{
     background:#2f3e46;
     color:white;
     text-align:center;
     padding:15px;
 }
-
-/* BOXES */
 
 .box{
     background:white;
@@ -23,15 +19,11 @@ header{
     margin:15px;
 }
 
-/* INPUTS */
-
 input{
     width:100%;
     padding:10px;
     margin:5px 0;
 }
-
-/* BUTTON */
 
 button{
     background:#2f3e46;
@@ -42,20 +34,14 @@ button{
     margin-top:5px;
 }
 
-/* LIST */
-
 ul{
     padding-left:20px;
 }
-
-/* FLIP CARD AREA */
 
 .scene{
     perspective:1000px;
     margin:20px 0;
 }
-
-/* CARD */
 
 .card{
     width:100%;
@@ -66,13 +52,9 @@ ul{
     cursor:pointer;
 }
 
-/* FLIP */
-
 .card.flipped{
     transform:rotateY(180deg);
 }
-
-/* FRONT + BACK */
 
 .front, .back{
     position:absolute;
@@ -86,8 +68,6 @@ ul{
     backface-visibility:hidden;
     font-size:18px;
 }
-
-/* BACK SIDE */
 
 .back{
     transform:rotateY(180deg);
