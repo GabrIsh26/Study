@@ -3,7 +3,7 @@ let index = 0;
 let score = 0;
 let flipped = false;
 
-/* ADD FLASHCARD */
+/* add flashcards to deck */
 
 function addCard(){
 
@@ -28,7 +28,7 @@ document.getElementById("deckList").appendChild(li);
     }
 }
 
-/* SHOW CARD */
+/* show front of card */
 
 function showCard(){
     document.getElementById("front").innerText =
@@ -38,7 +38,7 @@ function showCard(){
         deck[index].a;
 }
 
-/* FLIP CARD */
+/* flip the card for answer/question */
 
 function flipCard(){
 
@@ -57,7 +57,7 @@ function flipCard(){
     flipped = !flipped;
 }
 
-/* NEXT CARD */
+/* move on to next card */
 
 function nextCard(){
 
