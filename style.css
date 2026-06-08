@@ -1,32 +1,41 @@
 body{
     margin:0;
     font-family:Arial;
-    background:#f4f6f8;
-    color:#222;
+    background:#eef2f7;
+    color:#1f1f1f;
 }
+
+/* HEADER */
 
 header{
-    background:#2f3e46;
+    background:#1f3a5f;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
 }
 
+/* BOXES */
+
 .box{
-    background:white;
-    border:1px solid #ddd;
+    background:#ffffff;
+    border:2px solid #d6dbe3;
     padding:15px;
     margin:15px;
 }
+
+/* INPUTS */
 
 input{
     width:100%;
     padding:10px;
     margin:5px 0;
+    border:1px solid #ccc;
 }
 
+/* BUTTON */
+
 button{
-    background:#2f3e46;
+    background:#2b6cb0;
     color:white;
     border:none;
     padding:10px;
@@ -34,9 +43,17 @@ button{
     margin-top:5px;
 }
 
+button:hover{
+    background:#1f4f86;
+}
+
+/* LIST */
+
 ul{
     padding-left:20px;
 }
+
+/* CARD */
 
 .scene{
     perspective:1000px;
@@ -63,12 +80,23 @@ ul{
     display:flex;
     align-items:center;
     justify-content:center;
-    background:white;
-    border:1px solid #ddd;
+    background:#ffffff;
+    border:2px solid #cbd5e0;
     backface-visibility:hidden;
     font-size:18px;
 }
 
 .back{
     transform:rotateY(180deg);
+}
+
+/* UNLOCK AREA */
+
+.unlock{
+    background:#ffffff;
+    border:2px solid #d6dbe3;
+    padding:10px;
+    margin-top:10px;
+    text-align:center;
+    font-size:18px;
 }
