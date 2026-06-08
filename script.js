@@ -1,86 +1,68 @@
-let deck = [];
-let index = 0;
-let score = 0;
-let flipped = false;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudyCards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-/* add flashcards to deck */
+<body>
 
-function addCard(){
+<header>
+    <h1>StudyCards</h1>
+    <p>Flashcard Game</p>
+</header>
 
-    let q = document.getElementById("question").value;
-    let a = document.getElementById("answer").value;
+<main>
 
-    if(q === "" || a === ""){
-        alert("Fill both fields");
-        return;
-    }
+<section class="box">
 
-    deck.push({q:q, a:a});
+    <h2>Create Flashcards</h2>
 
-   let li = document.createElement("li");
-li.textContent = q;
-document.getElementById("deckList").appendChild(li);
-    document.getElementById("question").value = "";
-    document.getElementById("answer").value = "";
+    <input id="question" placeholder="Question">
+    <input id="answer" placeholder="Answer">
 
-    if(deck.length === 1){
-        showCard();
-    }
-}
+    <button onclick="addCard()">Add Card</button>
 
-/* show front of card */
+</section>
 
-function showCard(){
-    document.getElementById("front").innerText =
-        deck[index].q;
+<!-- SHOW DECK -->
+<section class="box">
 
-    document.getElementById("back").innerText =
-        deck[index].a;
-}
+    <h2>Your Deck</h2>
+    <ul id="deckList"></ul>
 
-/* flip the card for answer/question */
+</section>
 
-function flipCard(){
+<!-- GAME SECTION -->
+<section class="box">
 
-    if(deck.length === 0){
-        alert("Add flashcards first!");
-        return;
-    }
+    <h2>Game Mode</h2>
 
-    document.getElementById("card").classList.toggle("flipped");
+    <p>Score: <span id="score">0</span></p>
+    <p>Character:</p>
+<div class="unlock" id="character">🔒 Locked</div>
 
-    if(!flipped){
-        score += 5;
-        document.getElementById("score").innerText = score;
-    }
+    <!-- FLIP CARD -->
+    <div class="scene">
+        <div class="card" id="card" onclick="flipCard()">
 
-    flipped = !flipped;
-}
+            <div class="front" id="front">
+                Add flashcards first
+            </div>
 
-/* move on to next card */
+            <div class="back" id="back">
+            </div>
 
-function nextCard(){
+        </div>
+    </div>
 
-    if(deck.length === 0){
-        alert("No cards yet!");
-        return;
-    }
+    <button onclick="nextCard()">Next Card (+10 points)</button>
 
-    index++;
+</section>
 
-    if(index >= deck.length){
-        index = 0;
-        score += 20;
-        alert("Deck complete! +20 bonus");
-    } else {
-        score += 10;
-    }
+</main>
 
-    flipped = false;
+<script src="script.js"></script>
 
-    document.getElementById("card").classList.remove("flipped");
-
-    showCard();
-
-    document.getElementById("score").innerText = score;
-}
+</body>
+</html>
