@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>StudySphere</title>
+    <title>StudyCards</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>StudySphere</h1>
+    <h1>StudyCards</h1>
     <p>Flashcard Game</p>
 </header>
 
@@ -25,6 +25,7 @@
 
 </section>
 
+<!-- SHOW DECK -->
 <section class="box">
 
     <h2>Your Deck</h2>
@@ -32,12 +33,16 @@
 
 </section>
 
+<!-- GAME SECTION -->
 <section class="box">
 
     <h2>Game Mode</h2>
 
     <p>Score: <span id="score">0</span></p>
+    <p>Character:</p>
+<div class="unlock" id="character">🔒 Locked</div>
 
+    <!-- FLIP CARD -->
     <div class="scene">
         <div class="card" id="card" onclick="flipCard()">
 
